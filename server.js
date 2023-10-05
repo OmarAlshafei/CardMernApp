@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const app = express();
 const MongoClient = require('mongodb').MongoClient;
-const url ='mongodb+srv://omaralshafei:pCqL5v0a5ukeDSKv@cluster0.dfrobk8.mongodb.net/?retryWrites=true&w=majority';
+const url = 'mongodb+srv://oa:oa@cluster0.fyrwd6g.mongodb.net/?retryWrites=true&w=majority';
 const client = new MongoClient(url);
 client.connect();
 app.use(cors());
@@ -21,7 +21,7 @@ res.setHeader(
 );
 next();
 });
-app.listen(4000); // start Node + Express server on port 5000
+app.listen(5000); // start Node + Express server on port 5000
 var cardList =
 [
 'Roy Campanella',
@@ -182,4 +182,5 @@ _ret.push( results[i].Card );
 var ret = {results:_ret, error:error};
 res.status(200).json(ret);
 });
+
 
